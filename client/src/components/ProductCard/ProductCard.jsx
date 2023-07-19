@@ -10,7 +10,11 @@ import './ProductCard.css'
 
 
 export function ProductCard() {
-  const { data } = useContext(getProduct);
+  const { data, handleAddToCart } = useContext(getProduct);
+  
+  const handleBuyClick = (product) => {
+    handleAddToCart({ ...product, quantity: 1 });
+};
 
   return (
     <>
@@ -36,7 +40,7 @@ export function ProductCard() {
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button size="small" color="primary" className="buy-button">
+            <Button size="small" color="primary" className="buy-button" onClick={() => handleBuyClick(product)} >
               Comprar
             </Button>
           </CardActions>
