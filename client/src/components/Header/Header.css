@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400&display=swap');
+
+/* COLORES DEL PROYECTO */
+:root {
+  --principal: #5e60ce;
+  --claro: #FFFFFF;
+  --oscuro: #141314;
+  --gris: #e0e1dd;
+}
+
+
+.header-container {
+  background-color:var(--oscuro);
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Roboto';
+  font-weight: 200;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo-icon {
+  font-size: 28px;
+  margin-right: 5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  font-family: 'Roboto';
+  font-weight: 300;
+}
+
+.nav-links a:hover {
+  color: var(--principal);
+  transition: 0.3s ease-in-out;
+}
+
+.nav-links li {
+  margin-left: 15px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  font-size: 24px;
+}
+
+
+

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400&display=swap');
+
+
+
+.footer {
+  font-family: 'Roboto';
+  font-weight: 200;
+  background-color: var(--oscuro);
+  padding: 20px;
+  color: #fff;
+  
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-links li {
+  margin: 0 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 10px;
+}

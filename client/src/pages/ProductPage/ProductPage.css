@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400&display=swap');
+
+
+
+/* COLORES DEL PROYECTO */
+:root {
+  --principal: #5e60ce;
+  --claro: #FFFFFF;
+  --oscuro: #141314;
+  --gris: #e0e1dd;
+}
+
+
+.product-section {
+  padding: 40px 0;
+  background-color:var(--claro);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-section-title {
+  font-family: 'Orbitron';
+  text-transform: uppercase;
+  font-weight: 200;
+  text-align: center;
+  font-size: 30px;
+  ;
+  margin-bottom: 50px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 150px;
+  max-width: 1200px;
+  margin: 0 auto;
+}

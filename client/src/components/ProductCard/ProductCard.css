@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500&display=swap');
+
+/* COLORES DEL PROYECTO */
+:root {
+  --principal: #5e60ce;
+  --claro: #FFFFFF;
+  --oscuro: #141314;
+  --gris: #e0e1dd;
+}
+
+
+
+.name-product{
+    color: var(--principal);
+    font-family:'Orbitron' ;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+
+  
