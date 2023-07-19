@@ -1,3 +1,4 @@
+// Header.js
 import './Header.css';
 import React, { useState, useContext } from "react";
 import { Link } from 'react-router-dom';
@@ -6,9 +7,9 @@ import { ShoppingCart, Explore } from '@material-ui/icons';
 import { getProduct } from '../../Context/UserProvider';
 import packImage from './img/pack1.jpg';
 
-
 export const Header = () => {
-  const { cartItems } = useContext(getProduct);
+  const { cartItems, handleIncrement, handleDecrement, handleRemoveItem } = useContext(getProduct);
+
   const [isCartOpen, setCartOpen] = useState(false);
 
   const handleCartClick = () => {
@@ -26,7 +27,8 @@ export const Header = () => {
     });
     return total.toFixed(2);
   };
-
+  
+  
   return (
     <header className="header-container">
       <nav className="navbar">
@@ -56,7 +58,7 @@ export const Header = () => {
         </ul>
       </nav>
 
-      {/* MODAL CARRITO COMPRA */}
+       {/* MODAL CARRITO COMPRA */}
       <Modal open={isCartOpen} onClose={handleCloseCart} className="modal-container">
         <div className="modal-content">
           <span className="modal-close-btn" onClick={handleCloseCart}>
@@ -65,12 +67,15 @@ export const Header = () => {
           <h3 className="cart-title">Carrito De Compras</h3>
           <div className="cart-items">
             {cartItems.map((item) => (
-              <div className="cart-item" key={item.productId}>
+              <div className="cart-item" key={item.id}>
                 <img src={packImage} alt={item.name} className="cart-item-image" />
                 <div className="cart-item-details">
                   <h4>{item.name}</h4>
                   <p>Precio: €{item.price}</p>
                   <p>Cantidad: {item.quantity}</p>
+                  <button onClick={() => handleIncrement(item)}>+</button>
+                  <button onClick={() => handleDecrement(item)}>-</button>
+                  <button onClick={() => handleRemoveItem(item)}>Eliminar</button>
                 </div>
               </div>
             ))}

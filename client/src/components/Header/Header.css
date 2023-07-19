@@ -81,11 +81,13 @@
 }
 
 .modal-close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  position: relative;
+  bottom: 10px;
+  left: 350px;
   cursor: pointer;
   color: #1e1e2e;
+  font-family: 'Orbitron';
+  font-weight: bold;
 }
 
 .cart-title {
@@ -145,4 +147,22 @@
 }
 
 
+.cart-item-details button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin-right: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
 
+.cart-item-details button:hover {
+  background-color: #555;
+}
+
+.cart-item-details button:active {
+  background-color: #222;
+}

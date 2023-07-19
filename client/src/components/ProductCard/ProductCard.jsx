@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext} from "react";
 import { getProduct } from "../../Context/UserProvider";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -40,7 +40,7 @@ export function ProductCard() {
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button size="small" color="primary" className="buy-button" onClick={() => handleBuyClick(product)} >
+            <Button size="small" color="primary" className="buy-button" onClick={() =>handleBuyClick(product)} >
               Comprar
             </Button>
           </CardActions>
@@ -49,6 +49,3 @@ export function ProductCard() {
     </>
   );
 }
-
-
-
