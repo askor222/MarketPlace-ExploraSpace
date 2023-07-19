@@ -8,7 +8,7 @@ import { ProductContext } from '../../Context/UserProvider';
 import packImage from './img/pack1.jpg';
 
 export const Header = () => {
-  const { cartItems, handleIncrement, handleDecrement, handleRemoveItem } = useContext(ProductContext);
+  const { cartItems, handleIncrement, handleDecrement, handleRemoveItem, calculateTotalQuantity } = useContext(ProductContext);
 
   const [isCartOpen, setCartOpen] = useState(false);
 
@@ -27,8 +27,8 @@ export const Header = () => {
     });
     return total.toFixed(2);
   };
-  
-  
+
+
   return (
     <header className="header-container">
       <nav className="navbar">
@@ -43,13 +43,19 @@ export const Header = () => {
             <Link to="/">Inicio</Link>
           </li>
           <li>
+            <Link to="/Registro">Cuenta</Link>
+          </li>
+          <li>
             <Link to="/product/:id">Productos</Link>
           </li>
           <li>
             <Link onClick={handleCartClick}>
               <Icon className="cart-icon">
-                <ShoppingCart />
+              <span className="cart-quantity">{calculateTotalQuantity()}</span>
+                <ShoppingCart  />    
               </Icon>
+             
+
             </Link>
           </li>
           <li>
@@ -58,7 +64,7 @@ export const Header = () => {
         </ul>
       </nav>
 
-       {/* MODAL CARRITO COMPRA */}
+      {/* MODAL CARRITO COMPRA */}
       <Modal open={isCartOpen} onClose={handleCloseCart} className="modal-container">
         <div className="modal-content">
           <span className="modal-close-btn" onClick={handleCloseCart}>

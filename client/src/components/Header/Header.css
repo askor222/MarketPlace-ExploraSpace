@@ -12,9 +12,14 @@
 
 .header-container {
   background-color:var(--oscuro);
+  position: fixed;
   padding: 20px;
   color: #fff;
   text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 
 .navbar {
@@ -165,4 +170,17 @@
 
 .cart-item-details button:active {
   background-color: #222;
+}
+
+
+
+.cart-quantity {
+  position: absolute;
+  top: 8px;
+  margin-left: 8px;
+  background-color:var(--principal);
+  color: white;
+  padding: 2px 5px;
+  border-radius: 50%;
+  font-size: 12px;
 }
