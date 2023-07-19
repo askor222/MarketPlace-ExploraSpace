@@ -4,11 +4,11 @@ import React, { useState, useContext } from "react";
 import { Link } from 'react-router-dom';
 import { Icon, Modal } from '@material-ui/core';
 import { ShoppingCart, Explore } from '@material-ui/icons';
-import { getProduct } from '../../Context/UserProvider';
+import { ProductContext } from '../../Context/UserProvider';
 import packImage from './img/pack1.jpg';
 
 export const Header = () => {
-  const { cartItems, handleIncrement, handleDecrement, handleRemoveItem } = useContext(getProduct);
+  const { cartItems, handleIncrement, handleDecrement, handleRemoveItem } = useContext(ProductContext);
 
   const [isCartOpen, setCartOpen] = useState(false);
 

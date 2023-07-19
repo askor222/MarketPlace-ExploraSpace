@@ -1,5 +1,5 @@
 import React, { useContext} from "react";
-import { getProduct } from "../../Context/UserProvider";
+import { ProductContext } from "../../Context/UserProvider";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -10,7 +10,8 @@ import './ProductCard.css'
 
 
 export function ProductCard() {
-  const { data, handleAddToCart } = useContext(getProduct);
+  const { data, handleAddToCart } = useContext(ProductContext);
+  
   
   const handleBuyClick = (product) => {
     handleAddToCart({ ...product, quantity: 1 });
@@ -19,7 +20,7 @@ export function ProductCard() {
   return (
     <>
       {data.map((product) => (
-        <Card key={product._id} sx={{ maxWidth: 345 }}>
+        <Card key={product.id} sx={{ maxWidth: 345 }}>
           <CardActionArea>
             <CardMedia
               component="img"
