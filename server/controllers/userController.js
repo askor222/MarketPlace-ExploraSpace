@@ -1,10 +1,10 @@
 const User = require('../models/User.js');
 const jwt = require('jsonwebtoken');
 
-// REGISTRAR UN NUEVO USUARIO
+// R E G I S T R A R   U N   N U E V O   U S U A R I O
 exports.registerUser = async (req, res) => {
   try {
-    const { username, password } = req.body;
+    const { username, password, role } = req.body;
 
     // Verificar si el usuario ya existe en la base de datos
     const existingUser = await User.findOne({ username });
@@ -13,7 +13,7 @@ exports.registerUser = async (req, res) => {
     }
 
     // Crear un nuevo usuario
-    const newUser = new User({ username, password });
+    const newUser = new User({ username, password, role });
     await newUser.save();
 
     res.status(201).json({ message: 'Usuario registrado correctamente' });
@@ -22,7 +22,7 @@ exports.registerUser = async (req, res) => {
   }
 };
 
-// INICIAR SESIÓN DE USUARIO
+// I N I C I A R   S E S I Ó N   D E   U S U A R I O
 exports.loginUser = async (req, res) => {
   try {
     const { username, password } = req.body;
@@ -51,7 +51,7 @@ exports.loginUser = async (req, res) => {
   }
 };
 
-// OBTENER INFO DE UN USUARIO ESPECÍFICO
+// O B T E N E R    I N F O    D E    U N    U S U A R I O   P O R  ID
 exports.getUserById = async (req, res) => {
   try {
     const { userId } = req.params;
@@ -72,7 +72,7 @@ exports.getUserById = async (req, res) => {
 };
 
 
-// CERRAR SESIÓN DE USUARIO
+// C E R R A R   S E S I Ó N   D E   U S U A R I O
 exports.logoutUser = (req, res) => {
   try {
     const { userId } = req.params;
@@ -96,4 +96,26 @@ exports.logoutUser = (req, res) => {
 };
 
 
+// R U T A S   P R O T E G I D A S
 
+// Función para acceder a la ruta protegida para U S E R S ('/ruta-protegida-user')
+exports.accessUserRoute = (req, res) => {
+  // Verificar el rol del usuario antes de permitir el acceso
+  if (req.user.role === 'user') {
+    // Realiza las acciones específicas de la ruta protegida para 'user'
+    return res.json({ message: 'Acceso permitido para usuarios.' });
+  } else {
+    return res.status(403).json({ error: 'Acceso denegado. No tienes los permisos necesarios.' });
+  }
+};
+
+// Función para acceder a la ruta protegida para A D M I N S ('/ruta-protegida-admin')
+exports.accessAdminRoute = (req, res) => {
+  // Verificar el rol del usuario antes de permitir el acceso
+  if (req.user.role === 'admin') {
+    // Realiza las acciones específicas de la ruta protegida para 'admin'
+    return res.json({ message: 'Acceso permitido para administradores.' });
+  } else {
+    return res.status(403).json({ error: 'Acceso denegado. No tienes los permisos necesarios.' });
+  }
+};

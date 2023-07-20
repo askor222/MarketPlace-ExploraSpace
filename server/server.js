@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const app = express();
 const PORT = process.env.PORT || 8000;
 
+
 // Middlewares
 app.use(cors());
 app.use(express.json());
@@ -16,6 +17,8 @@ app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/orders', orderRoutes);
 
+
+
 // MongoDB connection
 mongoose.connect('mongodb://127.0.0.1:27017/my-ecommerce', {
   useNewUrlParser: true,
@@ -25,6 +28,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/my-ecommerce', {
 }).catch((error) => {
   console.log('MongoDB connection error:', error);
 });
+
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port http://localhost:8000/`);

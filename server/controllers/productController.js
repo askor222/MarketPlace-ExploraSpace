@@ -1,4 +1,6 @@
 const Product = require('../models/Product');
+const io = require('socket.io')(); // Importa socket.io para emitir notificaciones
+
 
 // Obtener todos los productos
 exports.getAllProducts = async (req, res) => {
@@ -35,6 +37,8 @@ exports.createProduct = async (req, res) => {
     res.status(500).json({ error: 'Error al crear el producto' });
   }
 };
+
+
 
 // Actualizar un producto por ID
 exports.updateProduct = async (req, res) => {
