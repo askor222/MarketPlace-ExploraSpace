@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Header } from '../../components/Header/Header';
 import { Banner } from '../../components/Banner/Banner';
 import { Footer } from '../../components/Footer/Footer';
@@ -52,6 +52,7 @@ export function Registro() {
           <button className="registro-button" onClick={handleRegistro}>
             Registrarse
           </button>
+          <p className='cuentaOn'>¿Tienes cuenta? <Link><span>Inicia Sesión</span></Link></p>
         </div>
       </div>
       <Footer />

@@ -14,7 +14,7 @@ export const HomePage = () => {
         <Header />
         <div className="header-content">
             <h1 className="header-title">¡Descubre el Universo!</h1>
-            <p className="header-subtitle">¿Alguna vez has soñado con volar al espacio? Hazlo realidad con nuestras simulaciones</p>
+            <p className="header-subtitle">¿Alguna vez te has preguntado cómo se siente volar al espacio? Descúbrelo con nuestras simulaciones</p>
             <Link to="/product/:id" className="header-button">
               <span>Ver productos</span>
             </Link>

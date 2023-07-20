@@ -31,9 +31,10 @@
   }
   
   .panel-comprador-section-title {
-    color: #5e60ce;;
+    color: #5e60ce;
+    text-transform: uppercase;
     font-family: 'Orbitron';
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
   }
@@ -46,8 +47,9 @@
   
   .panel-comprador-compra,
   .panel-comprador-recomendacion {
-    background-color: rgba(0, 0, 0, 0.4);
-    color: #fff;
+    background-color: rgba(235, 235, 235, 0.888);
+    font-family: 'Roboto';  
+    color: #000000;
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 10px;

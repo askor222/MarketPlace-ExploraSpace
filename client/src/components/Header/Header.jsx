@@ -98,7 +98,9 @@ export const Header = () => {
           </div>
           <div className="cart-summary">
             <p>Total: €{calculateTotal()}</p>
+            <Link to="/Registro">
             <button className="checkout-button">Realizar Pago</button>
+            </Link>
           </div>
         </div>
       </Modal>
