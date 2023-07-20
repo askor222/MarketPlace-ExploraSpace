@@ -1,0 +1,25 @@
+/* En el archivo ProductFilter.css */
+.product-filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.product-filter-button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 20px;
+  border: 2px solid var(--principal);
+  background-color: transparent;
+  color: var(--principal);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.product-filter-button:hover {
+  background-color: var(--principal);
+  color: var(--claro);
+}

@@ -37,3 +37,14 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+
+
+.centered-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem; /* Ajusta este margen según sea necesario */
+}
+
+
+
