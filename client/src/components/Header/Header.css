@@ -184,3 +184,26 @@
   border-radius: 50%;
   font-size: 12px;
 }
+
+
+.notification-badge {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+.notification-badge {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+

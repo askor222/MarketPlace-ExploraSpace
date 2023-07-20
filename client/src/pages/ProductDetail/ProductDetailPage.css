@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400&display=swap');
+
+
+
+
+:root {
+    --principal: #5e60ce;
+    --claro: #FFFFFF;
+    --oscuro: #141314;
+    --gris: #e0e1dd;
+}
+
+
+.product-detail-wrap {
+    padding: 4rem 2rem;
+    background-color: var(--claro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-img {
+
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.content-description {
+    width: 100%;
+    display: flex;
+    flex: 1 1 auto;
+    padding: 0 6rem;
+    flex-direction: column;
+}
+
+
+
+.lists{
+    padding: 1rem;
+}
+
+.img-embed {
+    flex-grow: 1;
+    width: 0;
+    object-fit: contain;
+}
+
+.content-button {
+    display: flex;
+    gap: 1rem;
+}
+
+.header-button.--btnmod {
+    border: none;
+    box-shadow: none;
+}
+
+
+
+.product-section-title.--detail-page {
+    text-align: left;
+    margin-right: 100px;
+    padding: 1rem 0;
+    margin: 0;
+}

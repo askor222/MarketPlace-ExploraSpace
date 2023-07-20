@@ -14,7 +14,7 @@ export const HomePage = () => {
         <Header />
         <div className="header-content">
             <h1 className="header-title">¡Descubre el Universo!</h1>
-            <p className="header-subtitle">Explora nuestra amplia selección de productos espaciales</p>
+            <p className="header-subtitle">¿Alguna vez has soñado con volar al espacio? Hazlo realidad con nuestras simulaciones</p>
             <Link to="/product/:id" className="header-button">
               <span>Ver productos</span>
             </Link>
@@ -27,7 +27,7 @@ export const HomePage = () => {
                 En ExploraSpace, te llevamos a un viaje fascinante a través de las maravillas del espacio.
                 Explora y adquiere productos espaciales únicos que te transportarán a las estrellas.
               </p>
-              <Link to='/Contacto'  className="hero-button">
+              <Link to='/Contact'  className="hero-button">
                 Contactar
               </Link>
             </div>

@@ -1,0 +1,67 @@
+/* PanelComprador.css */
+
+.panel-comprador-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .panel-comprador-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  }
+  
+  .panel-comprador-title {
+    font-family: 'Orbitron';
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .panel-comprador-section {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .panel-comprador-section-title {
+    color: #5e60ce;;
+    font-family: 'Orbitron';
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .panel-comprador-compras-list,
+  .panel-comprador-recomendaciones-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .panel-comprador-compra,
+  .panel-comprador-recomendacion {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .panel-comprador-compra p,
+  .panel-comprador-recomendacion p {
+    margin: 5px 0;
+  }
+  
+  .footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  

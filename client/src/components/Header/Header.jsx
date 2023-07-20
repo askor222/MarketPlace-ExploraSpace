@@ -6,11 +6,15 @@ import { Icon, Modal } from '@material-ui/core';
 import { ShoppingCart, Explore } from '@material-ui/icons';
 import { ProductContext } from '../../Context/UserProvider';
 import packImage from './img/pack1.jpg';
+import CircleNotificationsIcon from '@mui/icons-material/CircleNotifications';
 
 export const Header = () => {
   const { cartItems, handleIncrement, handleDecrement, handleRemoveItem, calculateTotalQuantity } = useContext(ProductContext);
-
   const [isCartOpen, setCartOpen] = useState(false);
+
+
+
+
 
   const handleCartClick = () => {
     setCartOpen(true);
@@ -19,6 +23,8 @@ export const Header = () => {
   const handleCloseCart = () => {
     setCartOpen(false);
   };
+
+
 
   const calculateTotal = () => {
     let total = 0;
@@ -51,15 +57,19 @@ export const Header = () => {
           <li>
             <Link onClick={handleCartClick}>
               <Icon className="cart-icon">
-              <span className="cart-quantity">{calculateTotalQuantity()}</span>
-                <ShoppingCart  />    
+                <span className="cart-quantity">{calculateTotalQuantity()}</span>
+                <ShoppingCart />
               </Icon>
-             
-
             </Link>
           </li>
           <li>
-            <Link to="/contacto">Contacto</Link>
+            <Icon>
+              <CircleNotificationsIcon />
+            </Icon>
+          </li>
+
+          <li>
+            <Link to="/Contact">Contacto</Link>
           </li>
         </ul>
       </nav>

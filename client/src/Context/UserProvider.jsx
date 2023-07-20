@@ -1,7 +1,3 @@
-
-
-
-
 // UserProvider.js
 import { useState, useEffect, createContext } from 'react';
 import axios from 'axios';
@@ -13,7 +9,7 @@ export function UserProvider({ children }) {
   const [data, setData] = useState([]);
   const cartLS = JSON.parse(localStorage.getItem('cartItems')) ?? []
   const [cartItems, setCartItems] = useState(cartLS);
-
+  
 
 
 
@@ -91,7 +87,6 @@ export function UserProvider({ children }) {
     });
     return totalQuantity;
   };
-
 
 
   return (

@@ -1,0 +1,172 @@
+.panel-vendedor-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .panel-vendedor-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top:50px ;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  }
+  
+  .panel-vendedor-title {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color:var(oscuro);
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .panel-vendedor-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .panel-vendedor-add-button {
+    font-family: 'Roboto', sans-serif;
+    background-color: #5e60ce;
+    color: #ffffff;
+    padding: 12px 24px;
+    font-weight: 300;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+    outline: none;
+  }
+  
+  .panel-vendedor-add-button:hover {
+    background-color: #4c4da9;
+  }
+  
+  .panel-vendedor-section {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .panel-vendedor-section-title {
+    font-family: 'Orbitron';
+    text-transform: uppercase;
+    color:#5e60ce;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .panel-vendedor-productos-list,
+  .panel-vendedor-ventas-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .panel-vendedor-producto,
+  .panel-vendedor-venta {
+    background-color: rgba(231, 231, 231, 0.4);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .panel-vendedor-producto p,
+  .panel-vendedor-venta p {
+    font-family: 'Roboto';
+    margin: 5px 0;
+    color: #000000;
+  }
+  
+  .panel-vendedor-producto p:nth-child(1) {
+    font-weight: bold;
+  }
+  
+  .panel-vendedor-producto p:nth-child(2) {
+    font-size: 14px;
+  }
+  
+  .panel-vendedor-producto p:nth-child(3) {
+    font-size: 14px;
+  }
+  
+ /* MODAL NUEVO PRODUCTO */
+
+
+ /* CSS para el modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .modal h2 {
+    font-family: 'Orbitron';
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .modal-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .modal-form input[type="file"] {
+    cursor: pointer;
+  }
+  
+  .modal-button {
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    background-color: #5e60ce;
+    color: #fff;
+    padding: 12px;
+    margin-top: 10px;
+    font-weight: 300;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .modal-button:hover {
+    background-color: #4c4da9;
+  }
+  
+  
